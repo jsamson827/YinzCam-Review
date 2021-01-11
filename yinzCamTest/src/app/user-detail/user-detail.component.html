@@ -1,0 +1,22 @@
+<div *ngIf="user">
+  <div class="room">
+    <button  (click)="goBack()" class="btn-main">go back</button>
+
+  </div>
+  <div class="room">
+    <h3>{{user.name }} Details</h3>
+    <div>
+      <img src="{{user.avatar_url}}" alt="user image">
+    </div>
+    <div><span class="heading">ID: </span>{{user.id}}</div>
+    <div><span class="heading">Name: </span>{{user.name}}</div>
+    <div><span class="heading">Login: </span>{{user.login}}</div>
+    <div>
+      <span class="heading"> Followers: </span> <ul> 
+        <li *ngFor="let follower of followers"> {{follower.login}}</li>
+      </ul> 
+    </div>
+  </div>
+    
+    
+  </div>

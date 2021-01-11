@@ -1,0 +1,16 @@
+<div class="dashboard">
+  <h3 calss="space">Top Users</h3> 
+  <h2>Search</h2> 
+  <div class="card-list">
+    
+    <div *ngFor="let user of users ">
+      <div class="user-card">
+        <a routerLink="/detail/{{user.login}}">
+          <img [src]="user.avatar_url">
+          <p>{{user.login}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="btn-main" (click)="getMoreUsers()">Load More Users</button>
+</div>
